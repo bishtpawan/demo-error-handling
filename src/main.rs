@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::Error;
 use demo::utilities::constant::INVALID_FILE_PATH;
 
-///This program is intended to show the recoverable error with match keyword.
+///This program is intended to show the recoverable error with match expression.
 
 fn main()
 {
