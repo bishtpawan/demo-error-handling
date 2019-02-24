@@ -4,12 +4,11 @@ use demo::utilities::constant::FILE_PATH;
 
 
 
-///This program is intended to show the recoverable error with match expression shortcuts(unwrap() and expect()).
+///This program is intended to show the recoverable error with propagation.
 
 fn main()
 {
-    let data: Result<String, Error> = read_content_from_file();
-    println!("{:?}",data);
+    println!("{:?}",read_content_from_file());
 }
 fn read_content_from_file() -> Result<String, Error>
 {
