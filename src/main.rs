@@ -1,12 +1,12 @@
 use std::fs::File;
 use std::io::Error;
-
+use demo::utilities::constant::INVALID_FILE_PATH;
 
 ///This program is intended to show the recoverable error with match keyword.
 
 fn main()
 {
-    let data: Result<File,Error> = File::open("new_file.txt");
+    let data: Result<File,Error> = File::open(INVALID_FILE_PATH);
     match data
         {
             Ok(file) => file,
