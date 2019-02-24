@@ -1,5 +1,5 @@
 [package]
-name = "demo-error-handling"
+name = "demo"
 version = "0.1.0"
 authors = ["bishtpawan <pawan.bisht@knoldus.in>"]
 edition = "2018"
