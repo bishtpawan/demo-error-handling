@@ -10,13 +10,13 @@ fn main()
 }
 
 fn get_file_from_path() {
-    let data: Result<File,Error> = File::open(INVALID_FILE_PATH);
+    let data: Result<File, Error> = File::open(INVALID_FILE_PATH);
     match data
         {
             Ok(file) => file,
             Err(error) => {
                 panic!("Unable to open file: {:?}", error)
-            },
+            }
         };
 }
 
@@ -28,10 +28,7 @@ mod test {
 
     #[test]
     #[should_panic]
-    fn test_shortcut_unwrap(){
+    fn test_get_file_from_path() {
         get_file_from_path();
     }
-
-
-
 }
