@@ -1,6 +1,6 @@
 use std::io::{Read, Error};
 use std::fs::File;
-use demo::utilities::constant::FILE_PATH;
+use demo::utilities::constant::{INVALID_FILE_PATH, FILE_PATH};
 
 
 
@@ -12,9 +12,24 @@ fn main()
 }
 fn read_content_from_file() -> Result<String, Error>
 {
-    let mut read_file: File =File::open(FILE_PATH)?;
+    let mut read_file: File =File::open(INVALID_FILE_PATH)?;
     let mut content: String = String::new();
     read_file.read_to_string(&mut content)?;
     Ok(content)
 }
 
+
+#[cfg(test)]
+mod test {
+    use crate::read_content_from_file;
+
+    #[test]
+    fn test_read_content_from_file_for_error(){
+        assert!(read_content_from_file().is_err());
+    }
+
+  /*   #[test]
+     fn test_read_content_from_file_for_success(){
+         assert!(read_content_from_file().is_ok());
+     }*/
+}
