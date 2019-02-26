@@ -6,6 +6,10 @@ use demo::utilities::constant::INVALID_FILE_PATH;
 
 fn main()
 {
+    get_file_from_path();
+}
+
+fn get_file_from_path(){
     File::open(INVALID_FILE_PATH).unwrap();
 
     //File::open(INVALID_FILE_PATH).expect("Unable to open file");
@@ -14,11 +18,12 @@ fn main()
 mod test {
     use std::fs::File;
     use demo::utilities::constant::INVALID_FILE_PATH;
+    use crate::get_file_from_path;
 
     #[test]
     #[should_panic]
     fn test_shortcut_unwrap(){
-        File::open(INVALID_FILE_PATH).unwrap();
+       get_file_from_path();
     }
 
     #[test]
