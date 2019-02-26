@@ -22,14 +22,14 @@ mod test {
 
     #[test]
     #[should_panic]
-    fn test_shortcut_unwrap(){
+    fn test_get_file_from_path_for_unwrap(){
        get_file_from_path();
     }
 
-    #[test]
+   /* #[test]
     #[should_panic]
-    fn test_shortcut_expect(){
+    fn test_get_file_from_path_for_expect(){
         File::open(INVALID_FILE_PATH).expect("Unable to open file");
-    }
+    }*/
 
 }
