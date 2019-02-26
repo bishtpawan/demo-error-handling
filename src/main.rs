@@ -6,6 +6,10 @@ use demo::utilities::constant::INVALID_FILE_PATH;
 
 fn main()
 {
+    get_file_from_path();
+}
+
+fn get_file_from_path() {
     let data: Result<File,Error> = File::open(INVALID_FILE_PATH);
     match data
         {
@@ -16,3 +20,18 @@ fn main()
         };
 }
 
+#[cfg(test)]
+mod test {
+    use std::fs::File;
+    use demo::utilities::constant::INVALID_FILE_PATH;
+    use crate::get_file_from_path;
+
+    #[test]
+    #[should_panic]
+    fn test_shortcut_unwrap(){
+        get_file_from_path();
+    }
+
+
+
+}
