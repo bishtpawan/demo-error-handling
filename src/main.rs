@@ -1,7 +1,7 @@
 use std::fs::File;
 use demo::utilities::constant::{INVALID_FILE_PATH};
 
-///This program is intended to show the recoverable error.
+///This program is intended to show the recoverable error with match keyword.
 
 
 fn main()
